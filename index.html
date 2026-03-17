@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Used Car Dealership</title>
+  <link rel="stylesheet" href="css/main.css" />
+  <script src="js/usedCars.js" defer></script>
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Used Car Dealership</h1>
+    <p>Browse and filter available cars.</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Filters</h2>
+      <form id="filterForm">
+        <label for="minYear">Minimum Year</label>
+        <input type="number" id="minYear" />
+
+        <label for="maxYear">Maximum Year</label>
+        <input type="number" id="maxYear" />
+
+        <label for="makeFilter">Make</label>
+        <select id="makeFilter" multiple></select>
+
+        <label for="maxMileage">Maximum Mileage</label>
+        <input type="number" id="maxMileage" />
+
+        <label for="minPrice">Minimum Price</label>
+        <input type="number" id="minPrice" />
+
+        <label for="maxPrice">Maximum Price</label>
+        <input type="number" id="maxPrice" />
+
+        <label for="colorFilter">Color</label>
+        <select id="colorFilter" multiple></select>
+
+        <button type="submit">Apply Filters</button>
+        <button type="button" id="resetBtn">Reset</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Available Cars</h2>
+      <p id="resultsCount"></p>
+      <p id="noResultsMessage"></p>
+      <div id="carListings"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Used Car Project</p>
+  </footer>
+</body>
+</html>
