@@ -12,6 +12,7 @@ const maxMileageInput = document.getElementById("maxMileage");
 const minPriceInput = document.getElementById("minPrice");
 const maxPriceInput = document.getElementById("maxPrice");
 
+// Display cars on the page
 function displayCars(cars) {
   carListings.innerHTML = "";
 
@@ -40,6 +41,8 @@ function displayCars(cars) {
   });
 }
 
+
+// Fill the make and color filter options
 function populateFilters() {
   const makes = [...new Set(usedCars.map(function (car) {
     return car.make;
@@ -64,12 +67,14 @@ function populateFilters() {
   });
 }
 
+// Get selected values from a multi-select box
 function getSelectedValues(selectElement) {
   return Array.from(selectElement.selectedOptions).map(function (option) {
     return option.value;
   });
 }
 
+// Filter cars based on user input
 function filterCars(event) {
   event.preventDefault();
 
@@ -103,6 +108,7 @@ function filterCars(event) {
   displayCars(filteredCars);
 }
 
+// Reset all filters and show all cars again
 function resetFilters() {
   filterForm.reset();
 
